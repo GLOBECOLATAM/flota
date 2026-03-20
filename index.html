@@ -17,654 +17,331 @@
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #050a0e;
-      --bg2: #0c1218;
-      --bg3: #111920;
-      --card: rgba(255,255,255,0.04);
-      --card-hover: rgba(255,255,255,0.07);
+      --bg2: rgba(255,255,255,0.025);
+      --card: rgba(255,255,255,0.045);
+      --card-hover: rgba(255,255,255,0.075);
       --card-border: rgba(255,255,255,0.08);
+      --card-border-hover: rgba(255,255,255,0.14);
+      --glass: rgba(10,16,22,0.85);
       --text1: #f0fdf4;
       --text2: rgba(240,253,244,0.6);
       --text3: rgba(240,253,244,0.3);
       --divider: rgba(255,255,255,0.06);
       --input-bg: rgba(255,255,255,0.05);
       --input-border: rgba(255,255,255,0.1);
-      --shadow: 0 2px 12px rgba(0,0,0,0.3);
-      --stat-bg: rgba(255,255,255,0.03);
-      --disponible-bg: rgba(0,168,107,0.12);
-      --disponible-text: #34D399;
-      --disponible-border: rgba(0,168,107,0.25);
-      --no-disp-bg: rgba(239,68,68,0.12);
-      --no-disp-text: #f87171;
-      --no-disp-border: rgba(239,68,68,0.25);
-      --backup-bg: rgba(251,191,36,0.12);
-      --backup-text: #fbbf24;
-      --backup-border: rgba(251,191,36,0.25);
-      --operativo-bg: rgba(0,119,182,0.12);
-      --operativo-text: #38BDF8;
-      --operativo-border: rgba(0,119,182,0.25);
-      --mnt-prev-bg: rgba(251,191,36,0.12);
-      --mnt-prev-text: #fbbf24;
-      --mnt-prev-border: rgba(251,191,36,0.25);
-      --mnt-corr-bg: rgba(249,115,22,0.12);
-      --mnt-corr-text: #fb923c;
-      --mnt-corr-border: rgba(249,115,22,0.25);
-      --siniestro-bg: rgba(239,68,68,0.15);
-      --siniestro-text: #f87171;
-      --siniestro-border: rgba(239,68,68,0.3);
-      --refresh-glow: rgba(0,168,107,0.4);
+      --gradient-1: rgba(0,168,107,0.12);
+      --gradient-2: rgba(0,119,182,0.09);
+      --noise-opacity: 0.02;
+      --disponible: #34D399; --disponible-bg: rgba(0,168,107,0.1); --disponible-border: rgba(0,168,107,0.22);
+      --no-disp: #f87171; --no-disp-bg: rgba(239,68,68,0.1); --no-disp-border: rgba(239,68,68,0.22);
+      --backup: #fbbf24; --backup-bg: rgba(251,191,36,0.1); --backup-border: rgba(251,191,36,0.22);
+      --operativo: #38BDF8; --operativo-bg: rgba(0,119,182,0.1); --operativo-border: rgba(0,119,182,0.22);
+      --mnt-prev: #fbbf24; --mnt-prev-bg: rgba(251,191,36,0.1); --mnt-prev-border: rgba(251,191,36,0.22);
+      --mnt-corr: #fb923c; --mnt-corr-bg: rgba(249,115,22,0.1); --mnt-corr-border: rgba(249,115,22,0.22);
+      --siniestro: #f87171; --siniestro-bg: rgba(239,68,68,0.12); --siniestro-border: rgba(239,68,68,0.25);
+      --glow: rgba(0,168,107,0.35);
+      --row-hover: rgba(255,255,255,0.04);
+      --top-line: rgba(255,255,255,0.1);
     }
   }
 
   @media (prefers-color-scheme: light) {
     :root {
       --bg: #f0faf5;
-      --bg2: #e8f5ee;
-      --bg3: #ffffff;
-      --card: rgba(255,255,255,0.8);
-      --card-hover: rgba(255,255,255,0.95);
-      --card-border: rgba(0,80,60,0.1);
+      --bg2: rgba(0,80,60,0.02);
+      --card: rgba(255,255,255,0.75);
+      --card-hover: rgba(255,255,255,0.92);
+      --card-border: rgba(0,80,60,0.09);
+      --card-border-hover: rgba(0,80,60,0.16);
+      --glass: rgba(240,250,245,0.88);
       --text1: #052e16;
-      --text2: rgba(5,46,22,0.6);
-      --text3: rgba(5,46,22,0.35);
-      --divider: rgba(0,80,60,0.08);
-      --input-bg: rgba(0,80,60,0.04);
-      --input-border: rgba(0,80,60,0.12);
-      --shadow: 0 2px 12px rgba(0,60,40,0.08);
-      --stat-bg: rgba(0,80,60,0.03);
-      --disponible-bg: rgba(0,168,107,0.08);
-      --disponible-text: #059669;
-      --disponible-border: rgba(0,168,107,0.2);
-      --no-disp-bg: rgba(239,68,68,0.06);
-      --no-disp-text: #dc2626;
-      --no-disp-border: rgba(239,68,68,0.18);
-      --backup-bg: rgba(217,119,6,0.08);
-      --backup-text: #b45309;
-      --backup-border: rgba(217,119,6,0.2);
-      --operativo-bg: rgba(0,119,182,0.08);
-      --operativo-text: #0369A1;
-      --operativo-border: rgba(0,119,182,0.2);
-      --mnt-prev-bg: rgba(217,119,6,0.08);
-      --mnt-prev-text: #b45309;
-      --mnt-prev-border: rgba(217,119,6,0.2);
-      --mnt-corr-bg: rgba(234,88,12,0.08);
-      --mnt-corr-text: #c2410c;
-      --mnt-corr-border: rgba(234,88,12,0.2);
-      --siniestro-bg: rgba(239,68,68,0.08);
-      --siniestro-text: #dc2626;
-      --siniestro-border: rgba(239,68,68,0.22);
-      --refresh-glow: rgba(0,168,107,0.3);
+      --text2: rgba(5,46,22,0.55);
+      --text3: rgba(5,46,22,0.3);
+      --divider: rgba(0,80,60,0.07);
+      --input-bg: rgba(0,80,60,0.035);
+      --input-border: rgba(0,80,60,0.1);
+      --gradient-1: rgba(0,168,107,0.08);
+      --gradient-2: rgba(0,119,182,0.06);
+      --noise-opacity: 0.012;
+      --disponible: #059669; --disponible-bg: rgba(0,168,107,0.07); --disponible-border: rgba(0,168,107,0.18);
+      --no-disp: #dc2626; --no-disp-bg: rgba(239,68,68,0.06); --no-disp-border: rgba(239,68,68,0.15);
+      --backup: #b45309; --backup-bg: rgba(217,119,6,0.06); --backup-border: rgba(217,119,6,0.16);
+      --operativo: #0369A1; --operativo-bg: rgba(0,119,182,0.06); --operativo-border: rgba(0,119,182,0.16);
+      --mnt-prev: #b45309; --mnt-prev-bg: rgba(217,119,6,0.06); --mnt-prev-border: rgba(217,119,6,0.16);
+      --mnt-corr: #c2410c; --mnt-corr-bg: rgba(234,88,12,0.06); --mnt-corr-border: rgba(234,88,12,0.16);
+      --siniestro: #dc2626; --siniestro-bg: rgba(239,68,68,0.06); --siniestro-border: rgba(239,68,68,0.18);
+      --glow: rgba(0,168,107,0.2);
+      --row-hover: rgba(0,80,60,0.03);
+      --top-line: rgba(255,255,255,0.5);
     }
   }
 
   * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Plus Jakarta Sans',-apple-system,sans-serif; background:var(--bg); color:var(--text1); min-height:100vh; overflow-x:hidden; }
 
-  body {
-    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-    background: var(--bg);
-    color: var(--text1);
-    min-height: 100vh;
-    overflow-x: hidden;
+  /* BG */
+  .bg-gradient { position:fixed; inset:0; z-index:0; pointer-events:none; }
+  .bg-gradient::before { content:''; position:absolute; top:-30%; left:-30%; width:160%; height:160%;
+    background: radial-gradient(ellipse at 20% 40%, var(--gradient-1) 0%, transparent 55%), radial-gradient(ellipse at 80% 60%, var(--gradient-2) 0%, transparent 55%);
+    will-change:transform; animation: bgMove 25s ease-in-out infinite alternate; }
+  @keyframes bgMove { 0%{transform:translate3d(0,0,0) rotate(0deg)} 100%{transform:translate3d(2%,-2%,0) rotate(1deg)} }
+  .noise { position:fixed; inset:0; z-index:1; opacity:var(--noise-opacity); pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); }
+  @media (prefers-reduced-motion:reduce) { .bg-gradient::before { animation:none; } }
+
+  /* HEADER */
+  .header { position:sticky; top:0; z-index:100; background:var(--glass); backdrop-filter:blur(24px) saturate(180%); -webkit-backdrop-filter:blur(24px) saturate(180%); border-bottom:1px solid var(--divider); padding:14px 24px; }
+  .header-inner { max-width:1400px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  .header-left { display:flex; align-items:center; gap:12px; }
+  .logo-mark { width:38px; height:38px; border-radius:11px; background:linear-gradient(135deg,var(--brand-green),var(--brand-blue)); display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 4px 16px rgba(0,168,107,0.2); }
+  .logo-mark svg { width:21px; height:21px; }
+  .header-title { font-size:18px; font-weight:800; letter-spacing:-0.4px; }
+  .header-badge { display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius:100px; background:var(--disponible-bg); border:1px solid var(--disponible-border); margin-left:8px; }
+  .header-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--disponible); animation:pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.75)} }
+  .header-badge-text { font-size:10px; font-weight:700; color:var(--disponible); letter-spacing:0.5px; text-transform:uppercase; }
+  .header-subtitle { font-size:11px; color:var(--text3); font-weight:600; letter-spacing:0.5px; }
+  .header-right { display:flex; align-items:center; gap:10px; }
+  .refresh-time { font-size:11px; color:var(--text3); font-weight:500; }
+  .btn-refresh { padding:9px 16px; border-radius:11px; border:1px solid var(--card-border); background:var(--card); color:var(--text2); font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; transition:all 0.25s cubic-bezier(0.16,1,0.3,1); display:flex; align-items:center; gap:7px; }
+  .btn-refresh:hover { background:var(--card-hover); color:var(--text1); border-color:var(--card-border-hover); transform:translateY(-1px); }
+  .btn-refresh:active { transform:scale(0.97); }
+  .btn-refresh svg { width:15px; height:15px; transition:transform 0.3s; }
+  .btn-refresh.loading svg { animation:spin 0.7s linear infinite; }
+  @keyframes spin { to{transform:rotate(360deg)} }
+
+  /* MAIN */
+  .main { position:relative; z-index:10; max-width:1400px; margin:0 auto; padding:20px 24px 40px; }
+
+  /* STATS */
+  .stats-row { display:grid; grid-template-columns:repeat(7,1fr); gap:10px; margin-bottom:20px; }
+  .stat-card { background:var(--card); border:1px solid var(--card-border); border-radius:16px; padding:18px 16px; cursor:pointer; transition:all 0.3s cubic-bezier(0.16,1,0.3,1); position:relative; overflow:hidden; }
+  .stat-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--top-line) 50%,transparent); opacity:0; transition:opacity 0.3s; }
+  .stat-card:hover { transform:translateY(-3px); background:var(--card-hover); border-color:var(--card-border-hover); box-shadow:0 8px 32px rgba(0,0,0,0.1); }
+  .stat-card:hover::before { opacity:1; }
+  .stat-card.active { border-color:var(--brand-green); box-shadow:0 0 0 1px var(--brand-green), 0 8px 32px rgba(0,168,107,0.08); }
+  .stat-icon { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; transition:transform 0.3s cubic-bezier(0.16,1,0.3,1); }
+  .stat-card:hover .stat-icon { transform:scale(1.08); }
+  .stat-icon svg { width:18px; height:18px; }
+  .stat-number { font-size:30px; font-weight:800; letter-spacing:-1.5px; line-height:1; margin-bottom:3px; transition:transform 0.3s; }
+  .stat-card:hover .stat-number { transform:translateX(2px); }
+  .stat-label { font-size:10.5px; color:var(--text3); font-weight:600; letter-spacing:0.5px; text-transform:uppercase; }
+
+  .si-total { background:linear-gradient(135deg,rgba(0,168,107,0.12),rgba(0,119,182,0.12)); }
+  .si-total svg { stroke:var(--brand-green); }
+  .si-disp { background:var(--disponible-bg); } .si-disp svg { stroke:var(--disponible); }
+  .si-nodisp { background:var(--no-disp-bg); } .si-nodisp svg { stroke:var(--no-disp); }
+  .si-backup { background:var(--backup-bg); } .si-backup svg { stroke:var(--backup); }
+  .si-oper { background:var(--operativo-bg); } .si-oper svg { stroke:var(--operativo); }
+  .si-mnt { background:var(--mnt-prev-bg); } .si-mnt svg { stroke:var(--mnt-prev); }
+  .si-sin { background:var(--siniestro-bg); } .si-sin svg { stroke:var(--siniestro); }
+
+  /* TOOLBAR */
+  .toolbar { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
+  .search-box { flex:1; min-width:220px; position:relative; }
+  .search-box svg { position:absolute; left:14px; top:50%; transform:translateY(-50%); width:16px; height:16px; color:var(--text3); pointer-events:none; }
+  .search-box input { width:100%; padding:12px 14px 12px 42px; border-radius:14px; border:1px solid var(--card-border); background:var(--card); color:var(--text1); font-family:inherit; font-size:13px; font-weight:500; outline:none; transition:all 0.25s; backdrop-filter:blur(10px); }
+  .search-box input::placeholder { color:var(--text3); }
+  .search-box input:focus { border-color:var(--brand-green); box-shadow:0 0 0 3px rgba(0,168,107,0.1), 0 4px 16px rgba(0,0,0,0.05); }
+  .filter-select { padding:12px 16px; border-radius:14px; border:1px solid var(--card-border); background:var(--card); color:var(--text1); font-family:inherit; font-size:13px; font-weight:500; outline:none; cursor:pointer; min-width:150px; backdrop-filter:blur(10px); transition:all 0.25s; appearance:none; background-image:url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2388887f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:36px; }
+  .filter-select:focus { border-color:var(--brand-green); }
+
+  /* TABLE */
+  .table-wrapper { background:var(--card); border:1px solid var(--card-border); border-radius:18px; overflow:hidden; backdrop-filter:blur(10px); position:relative; }
+  .table-wrapper::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--top-line) 30%,var(--top-line) 70%,transparent); z-index:2; }
+  .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table { width:100%; border-collapse:collapse; min-width:1050px; }
+  thead th { position:sticky; top:0; background:var(--bg2); padding:13px 14px; font-size:10px; font-weight:700; color:var(--text3); text-transform:uppercase; letter-spacing:1px; text-align:left; white-space:nowrap; border-bottom:1px solid var(--divider); z-index:5; }
+  thead th:first-child { padding-left:18px; }
+  tbody tr { transition:all 0.2s; }
+  tbody tr:hover { background:var(--row-hover); }
+  tbody tr:not(:last-child) td { border-bottom:1px solid var(--divider); }
+  td { padding:13px 14px; font-size:13px; font-weight:500; color:var(--text1); white-space:nowrap; }
+  td:first-child { padding-left:18px; }
+
+  .td-placa { font-weight:700; font-size:13.5px; letter-spacing:0.4px; display:flex; align-items:center; gap:10px; }
+  .placa-icon { width:30px; height:30px; border-radius:8px; background:var(--bg2); border:1px solid var(--divider); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .placa-icon svg { width:15px; height:15px; stroke:var(--text2); }
+  .td-km { font-variant-numeric:tabular-nums; font-weight:600; }
+  .td-km .km-bar { display:flex; align-items:center; gap:8px; }
+  .km-visual { width:40px; height:4px; border-radius:2px; background:var(--divider); overflow:hidden; flex-shrink:0; }
+  .km-fill { height:100%; border-radius:2px; background:linear-gradient(90deg,var(--brand-green),var(--brand-blue)); }
+
+  /* BADGES */
+  .badge { display:inline-flex; align-items:center; gap:5px; padding:5px 11px; border-radius:100px; font-size:11px; font-weight:600; letter-spacing:0.2px; white-space:nowrap; transition:all 0.2s; }
+  .badge-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+  .badge-disponible { background:var(--disponible-bg); color:var(--disponible); border:1px solid var(--disponible-border); }
+  .badge-disponible .badge-dot { background:var(--disponible); animation:pulse 2.5s ease-in-out infinite; }
+  .badge-no-disponible { background:var(--no-disp-bg); color:var(--no-disp); border:1px solid var(--no-disp-border); }
+  .badge-no-disponible .badge-dot { background:var(--no-disp); }
+  .badge-backup { background:var(--backup-bg); color:var(--backup); border:1px solid var(--backup-border); }
+  .badge-backup .badge-dot { background:var(--backup); }
+  .badge-operativo { background:var(--operativo-bg); color:var(--operativo); border:1px solid var(--operativo-border); }
+  .badge-mnt-prev { background:var(--mnt-prev-bg); color:var(--mnt-prev); border:1px solid var(--mnt-prev-border); }
+  .badge-mnt-corr { background:var(--mnt-corr-bg); color:var(--mnt-corr); border:1px solid var(--mnt-corr-border); }
+  .badge-siniestro { background:var(--siniestro-bg); color:var(--siniestro); border:1px solid var(--siniestro-border); }
+
+  .td-detail { max-width:150px; overflow:hidden; text-overflow:ellipsis; color:var(--text2); font-size:12.5px; }
+  .td-retorno { font-size:12px; font-weight:600; color:var(--text2); }
+  .td-empty { color:var(--text3); font-size:11px; font-style:italic; }
+
+  /* TABLE FOOTER */
+  .table-footer { padding:12px 18px; border-top:1px solid var(--divider); display:flex; justify-content:space-between; align-items:center; }
+  .table-count { font-size:12px; color:var(--text3); font-weight:600; }
+  .table-refresh { display:flex; align-items:center; gap:6px; font-size:11px; color:var(--text3); font-weight:500; }
+  .table-refresh-dot { width:5px; height:5px; border-radius:50%; background:var(--brand-green); animation:pulse 2.5s ease-in-out infinite; }
+
+  /* FOOTER */
+  .footer { display:flex; flex-direction:column; align-items:center; gap:4px; margin-top:36px; padding-bottom:20px; }
+  .footer-brand { font-size:11px; font-weight:700; letter-spacing:2px; background:linear-gradient(135deg,var(--brand-green),var(--brand-blue)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .footer-credit { font-size:9.5px; color:var(--text3); letter-spacing:0.8px; font-weight:500; }
+  .footer-credit .wig { font-weight:700; }
+
+  /* LOADING */
+  .loading-overlay { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:100px 20px; }
+  .loading-ring { width:52px; height:52px; border-radius:50%; border:3px solid var(--card-border); border-top-color:var(--brand-green); animation:spin 0.8s linear infinite; position:relative; }
+  .loading-ring::after { content:''; position:absolute; inset:5px; border-radius:50%; border:2px solid transparent; border-top-color:var(--brand-blue); animation:spin 1.2s linear infinite reverse; }
+  .loading-text { font-size:15px; color:var(--text2); font-weight:500; }
+  .loading-sub { font-size:12px; color:var(--text3); }
+
+  .no-results { text-align:center; padding:56px 20px; }
+  .no-results-icon { width:48px; height:48px; border-radius:14px; background:var(--bg2); display:inline-flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .no-results-icon svg { width:24px; height:24px; stroke:var(--text3); }
+  .no-results-text { font-size:15px; color:var(--text2); font-weight:600; }
+  .no-results-sub { font-size:13px; color:var(--text3); margin-top:4px; }
+
+  /* ANIMATIONS */
+  .anim { opacity:0; animation:slideUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards; }
+  @keyframes slideUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  .d1{animation-delay:.05s} .d2{animation-delay:.1s} .d3{animation-delay:.14s} .d4{animation-delay:.18s}
+  .d5{animation-delay:.22s} .d6{animation-delay:.26s} .d7{animation-delay:.3s} .d8{animation-delay:.36s} .d9{animation-delay:.42s}
+
+  /* Row animation */
+  @keyframes rowIn { from{opacity:0;transform:translateX(-8px)} to{opacity:1;transform:translateX(0)} }
+  tbody tr { animation:rowIn 0.4s cubic-bezier(0.16,1,0.3,1) forwards; opacity:0; }
+
+  /* RESPONSIVE */
+  @media (max-width:900px) {
+    .stats-row { grid-template-columns:repeat(4,1fr); }
+    .header { padding:12px 16px; }
+    .main { padding:16px 16px 32px; }
   }
-
-  /* === HEADER === */
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--divider);
-    padding: 16px 24px;
+  @media (max-width:600px) {
+    .stats-row { grid-template-columns:repeat(2,1fr); }
+    .toolbar { flex-direction:column; }
+    .stat-card { padding:14px 12px; }
+    .stat-number { font-size:24px; }
+    .header-badge { display:none; }
   }
-
-  .header-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .logo-mark {
-    width: 36px; height: 36px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--brand-green), var(--brand-blue));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .logo-mark svg { width: 20px; height: 20px; }
-
-  .header-title {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-  }
-
-  .header-subtitle {
-    font-size: 11px;
-    color: var(--text3);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .refresh-indicator {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    color: var(--text3);
-    font-weight: 500;
-  }
-
-  .refresh-dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--brand-green);
-    animation: breathe 3s ease-in-out infinite;
-  }
-
-  @keyframes breathe {
-    0%,100% { opacity:1; box-shadow: 0 0 0 0 var(--refresh-glow); }
-    50% { opacity:0.5; box-shadow: 0 0 8px 3px var(--refresh-glow); }
-  }
-
-  .btn-refresh {
-    padding: 8px 14px;
-    border-radius: 10px;
-    border: 1px solid var(--card-border);
-    background: var(--card);
-    color: var(--text2);
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .btn-refresh:hover { background: var(--card-hover); color: var(--text1); }
-  .btn-refresh svg { width: 14px; height: 14px; }
-  .btn-refresh.loading svg { animation: spin 0.8s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  /* === MAIN === */
-  .main {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 24px 40px;
-  }
-
-  /* === STAT CARDS === */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-
-  .stat-card {
-    background: var(--card);
-    border: 1px solid var(--card-border);
-    border-radius: 16px;
-    padding: 16px;
-    transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .stat-card:hover { transform: translateY(-2px); background: var(--card-hover); }
-
-  .stat-card.active {
-    border-color: var(--brand-green);
-    box-shadow: 0 0 0 1px var(--brand-green);
-  }
-
-  .stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    border-radius: 16px 16px 0 0;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .stat-card:hover::before, .stat-card.active::before { opacity: 1; }
-
-  .stat-card[data-filter="all"]::before { background: linear-gradient(90deg, var(--brand-green), var(--brand-blue)); }
-  .stat-card[data-filter="DISPONIBLE"]::before { background: var(--disponible-text); }
-  .stat-card[data-filter="NO DISPONIBLE"]::before { background: var(--no-disp-text); }
-  .stat-card[data-filter="BACKUP"]::before { background: var(--backup-text); }
-  .stat-card[data-filter="OPERATIVO"]::before { background: var(--operativo-text); }
-  .stat-card[data-filter="MNT"]::before { background: var(--mnt-prev-text); }
-  .stat-card[data-filter="SINIESTRO"]::before { background: var(--siniestro-text); }
-
-  .stat-number {
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-size: 11px;
-    color: var(--text3);
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-  }
-
-  /* === SEARCH + FILTERS === */
-  .toolbar {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-  }
-
-  .search-box {
-    flex: 1;
-    min-width: 200px;
-    position: relative;
-  }
-
-  .search-box svg {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px; height: 16px;
-    color: var(--text3);
-  }
-
-  .search-box input {
-    width: 100%;
-    padding: 11px 14px 11px 40px;
-    border-radius: 12px;
-    border: 1px solid var(--input-border);
-    background: var(--input-bg);
-    color: var(--text1);
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 500;
-    outline: none;
-    transition: all 0.2s;
-  }
-
-  .search-box input::placeholder { color: var(--text3); }
-  .search-box input:focus { border-color: var(--brand-green); box-shadow: 0 0 0 3px rgba(0,168,107,0.1); }
-
-  .filter-select {
-    padding: 11px 14px;
-    border-radius: 12px;
-    border: 1px solid var(--input-border);
-    background: var(--input-bg);
-    color: var(--text1);
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 500;
-    outline: none;
-    cursor: pointer;
-    min-width: 140px;
-  }
-
-  /* === VEHICLE TABLE === */
-  .table-wrapper {
-    background: var(--card);
-    border: 1px solid var(--card-border);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .table-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 1000px;
-  }
-
-  thead th {
-    position: sticky;
-    top: 0;
-    background: var(--bg2);
-    padding: 12px 14px;
-    font-size: 10.5px;
-    font-weight: 700;
-    color: var(--text3);
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    text-align: left;
-    white-space: nowrap;
-    border-bottom: 1px solid var(--divider);
-    z-index: 5;
-  }
-
-  tbody tr {
-    transition: background 0.15s;
-    cursor: default;
-  }
-
-  tbody tr:hover { background: var(--card-hover); }
-  tbody tr:not(:last-child) td { border-bottom: 1px solid var(--divider); }
-
-  td {
-    padding: 12px 14px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text1);
-    white-space: nowrap;
-  }
-
-  .td-placa {
-    font-weight: 700;
-    font-size: 13.5px;
-    letter-spacing: 0.3px;
-  }
-
-  .td-km {
-    font-variant-numeric: tabular-nums;
-    font-weight: 600;
-  }
-
-  /* === BADGES === */
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 4px 10px;
-    border-radius: 100px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    white-space: nowrap;
-  }
-
-  .badge-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .badge-disponible { background: var(--disponible-bg); color: var(--disponible-text); border: 1px solid var(--disponible-border); }
-  .badge-disponible .badge-dot { background: var(--disponible-text); }
-
-  .badge-no-disponible { background: var(--no-disp-bg); color: var(--no-disp-text); border: 1px solid var(--no-disp-border); }
-  .badge-no-disponible .badge-dot { background: var(--no-disp-text); }
-
-  .badge-backup { background: var(--backup-bg); color: var(--backup-text); border: 1px solid var(--backup-border); }
-  .badge-backup .badge-dot { background: var(--backup-text); }
-
-  .badge-operativo { background: var(--operativo-bg); color: var(--operativo-text); border: 1px solid var(--operativo-border); }
-  .badge-mnt-prev { background: var(--mnt-prev-bg); color: var(--mnt-prev-text); border: 1px solid var(--mnt-prev-border); }
-  .badge-mnt-corr { background: var(--mnt-corr-bg); color: var(--mnt-corr-text); border: 1px solid var(--mnt-corr-border); }
-  .badge-siniestro { background: var(--siniestro-bg); color: var(--siniestro-text); border: 1px solid var(--siniestro-border); }
-
-  .td-motivo, .td-reparacion {
-    max-width: 160px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: var(--text2);
-    font-size: 12.5px;
-  }
-
-  .td-retorno {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text2);
-  }
-
-  .td-empty { color: var(--text3); font-size: 12px; }
-
-  /* === FOOTER === */
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    margin-top: 32px;
-  }
-
-  .footer-brand {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, var(--brand-green), var(--brand-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .footer-credit {
-    font-size: 9.5px;
-    color: var(--text3);
-    letter-spacing: 0.8px;
-    font-weight: 500;
-  }
-
-  .footer-credit .wig { font-weight: 700; }
-
-  /* === LOADING === */
-  .loading-overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding: 80px 20px;
-  }
-
-  .loading-spinner {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    border: 3px solid var(--card-border);
-    border-top-color: var(--brand-green);
-    animation: spin 0.8s linear infinite;
-  }
-
-  .loading-text { font-size: 14px; color: var(--text2); font-weight: 500; }
-
-  /* === NO RESULTS === */
-  .no-results {
-    text-align: center;
-    padding: 48px 20px;
-    color: var(--text3);
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  /* === COUNT === */
-  .table-count {
-    padding: 10px 14px;
-    font-size: 11px;
-    color: var(--text3);
-    font-weight: 600;
-    border-top: 1px solid var(--divider);
-    display: flex;
-    justify-content: space-between;
-  }
-
-  /* === RESPONSIVE === */
-  @media (max-width: 768px) {
-    .header { padding: 12px 16px; }
-    .main { padding: 16px 16px 32px; }
-    .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-    .stat-card { padding: 12px; }
-    .stat-number { font-size: 22px; }
-    .stat-label { font-size: 10px; }
-    .toolbar { flex-direction: column; }
-    .header-title { font-size: 16px; }
-  }
-
-  @media (max-width: 480px) {
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  /* === ANIMATION === */
-  .fade-in {
-    animation: fadeIn 0.6s cubic-bezier(0.16,1,0.3,1) forwards;
-    opacity: 0;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .stagger-1 { animation-delay: 0.05s; }
-  .stagger-2 { animation-delay: 0.1s; }
-  .stagger-3 { animation-delay: 0.15s; }
-  .stagger-4 { animation-delay: 0.2s; }
-  .stagger-5 { animation-delay: 0.25s; }
-  .stagger-6 { animation-delay: 0.3s; }
-  .stagger-7 { animation-delay: 0.35s; }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<div class="bg-gradient"></div>
+<div class="noise"></div>
+
 <header class="header">
   <div class="header-inner">
     <div class="header-left">
       <div class="logo-mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2a10 10 0 1 0 10 10"/>
-          <path d="M12 2a14.5 14.5 0 0 0 0 20"/>
-          <path d="M12 2a14.5 14.5 0 0 1 0 20"/>
-          <path d="M2 12h10"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2a14.5 14.5 0 0 0 0 20"/><path d="M12 2a14.5 14.5 0 0 1 0 20"/><path d="M2 12h10"/></svg>
       </div>
       <div>
-        <div class="header-title">Flota Vehicular</div>
-        <div class="header-subtitle">Globeco Smart · Dashboard en vivo</div>
+        <div class="header-title">Flota Vehicular
+          <span class="header-badge"><span class="header-badge-dot"></span><span class="header-badge-text">Live</span></span>
+        </div>
+        <div class="header-subtitle">Globeco Smart · Panel de control en tiempo real</div>
       </div>
     </div>
     <div class="header-right">
-      <div class="refresh-indicator">
-        <div class="refresh-dot"></div>
-        <span id="last-update">Cargando...</span>
-      </div>
+      <span class="refresh-time" id="last-update">Conectando...</span>
       <button class="btn-refresh" onclick="loadData()" id="btn-refresh">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
         Actualizar
       </button>
     </div>
   </div>
 </header>
 
-<!-- MAIN -->
 <div class="main">
-
-  <!-- LOADING -->
   <div id="loading" class="loading-overlay">
-    <div class="loading-spinner"></div>
+    <div class="loading-ring"></div>
     <div class="loading-text">Conectando con la flota...</div>
+    <div class="loading-sub">Sincronizando datos del sistema</div>
   </div>
 
-  <!-- DASHBOARD (hidden until loaded) -->
   <div id="dashboard" style="display:none;">
-
-    <!-- STATS -->
-    <div class="stats-grid" id="stats-grid">
-      <div class="stat-card active fade-in stagger-1" data-filter="all" onclick="filterBy('all')">
-        <div class="stat-number" id="stat-total">0</div>
-        <div class="stat-label">Total Flota</div>
+    <div class="stats-row" id="stats-grid">
+      <!-- Total -->
+      <div class="stat-card active anim d1" data-filter="all" onclick="filterBy('all')">
+        <div class="stat-icon si-total"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="stat-number" id="s-total">0</div>
+        <div class="stat-label">Total flota</div>
       </div>
-      <div class="stat-card fade-in stagger-2" data-filter="DISPONIBLE" onclick="filterBy('DISPONIBLE')">
-        <div class="stat-number" id="stat-disponible" style="color:var(--disponible-text)">0</div>
+      <!-- Disponible -->
+      <div class="stat-card anim d2" data-filter="DISPONIBLE" onclick="filterBy('DISPONIBLE')">
+        <div class="stat-icon si-disp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="stat-number" id="s-disp" style="color:var(--disponible)">0</div>
         <div class="stat-label">Disponibles</div>
       </div>
-      <div class="stat-card fade-in stagger-3" data-filter="NO DISPONIBLE" onclick="filterBy('NO DISPONIBLE')">
-        <div class="stat-number" id="stat-no-disponible" style="color:var(--no-disp-text)">0</div>
-        <div class="stat-label">No Disponibles</div>
+      <!-- No Disponible -->
+      <div class="stat-card anim d3" data-filter="NO DISPONIBLE" onclick="filterBy('NO DISPONIBLE')">
+        <div class="stat-icon si-nodisp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
+        <div class="stat-number" id="s-nodisp" style="color:var(--no-disp)">0</div>
+        <div class="stat-label">No disponibles</div>
       </div>
-      <div class="stat-card fade-in stagger-4" data-filter="BACKUP" onclick="filterBy('BACKUP')">
-        <div class="stat-number" id="stat-backup" style="color:var(--backup-text)">0</div>
+      <!-- Backup -->
+      <div class="stat-card anim d4" data-filter="BACKUP" onclick="filterBy('BACKUP')">
+        <div class="stat-icon si-backup"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+        <div class="stat-number" id="s-backup" style="color:var(--backup)">0</div>
         <div class="stat-label">Backup</div>
       </div>
-      <div class="stat-card fade-in stagger-5" data-filter="OPERATIVO" onclick="filterBy('OPERATIVO')">
-        <div class="stat-number" id="stat-operativo" style="color:var(--operativo-text)">0</div>
+      <!-- Operativo -->
+      <div class="stat-card anim d5" data-filter="OPERATIVO" onclick="filterBy('OPERATIVO')">
+        <div class="stat-icon si-oper"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="stat-number" id="s-oper" style="color:var(--operativo)">0</div>
         <div class="stat-label">Operativos</div>
       </div>
-      <div class="stat-card fade-in stagger-6" data-filter="MNT" onclick="filterBy('MNT')">
-        <div class="stat-number" id="stat-mnt" style="color:var(--mnt-prev-text)">0</div>
+      <!-- Mantenimiento -->
+      <div class="stat-card anim d6" data-filter="MNT" onclick="filterBy('MNT')">
+        <div class="stat-icon si-mnt"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="stat-number" id="s-mnt" style="color:var(--mnt-prev)">0</div>
         <div class="stat-label">Mantenimiento</div>
       </div>
-      <div class="stat-card fade-in stagger-7" data-filter="SINIESTRO" onclick="filterBy('SINIESTRO')">
-        <div class="stat-number" id="stat-siniestro" style="color:var(--siniestro-text)">0</div>
+      <!-- Siniestro -->
+      <div class="stat-card anim d7" data-filter="SINIESTRO" onclick="filterBy('SINIESTRO')">
+        <div class="stat-icon si-sin"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="stat-number" id="s-sin" style="color:var(--siniestro)">0</div>
         <div class="stat-label">Siniestro</div>
       </div>
     </div>
 
-    <!-- TOOLBAR -->
-    <div class="toolbar fade-in" style="animation-delay:0.35s;">
+    <div class="toolbar anim d8">
       <div class="search-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
-        <input type="text" id="search" placeholder="Buscar por placa, código, tipo..." oninput="applyFilters()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search" placeholder="Buscar placa, código, tipo de vehículo..." oninput="applyFilters()">
       </div>
-      <select class="filter-select" id="filter-sede" onchange="applyFilters()">
-        <option value="">Todas las sedes</option>
-      </select>
-      <select class="filter-select" id="filter-tipo-vehiculo" onchange="applyFilters()">
-        <option value="">Todos los vehículos</option>
-      </select>
+      <select class="filter-select" id="f-sede" onchange="applyFilters()"><option value="">Todas las sedes</option></select>
+      <select class="filter-select" id="f-tipo" onchange="applyFilters()"><option value="">Tipo de vehículo</option></select>
     </div>
 
-    <!-- TABLE -->
-    <div class="table-wrapper fade-in" style="animation-delay:0.4s;">
+    <div class="table-wrapper anim d9">
       <div class="table-scroll">
         <table>
-          <thead>
-            <tr>
-              <th>Placa</th>
-              <th>Código</th>
-              <th>Proyecto</th>
-              <th>Sede</th>
-              <th>Estado</th>
-              <th>Vehículo</th>
-              <th>Tipo</th>
-              <th>Odómetro</th>
-              <th>Motivo</th>
-              <th>Reparación</th>
-              <th>Retorno Est.</th>
-            </tr>
-          </thead>
-          <tbody id="table-body"></tbody>
+          <thead><tr>
+            <th>Vehículo</th><th>Código</th><th>Proyecto</th><th>Sede</th><th>Estado</th>
+            <th>Tipo Vehículo</th><th>Condición</th><th>Odómetro</th><th>Motivo</th><th>Reparación</th><th>Retorno Est.</th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
         </table>
       </div>
-      <div class="table-count">
-        <span id="table-count-text">0 vehículos</span>
-        <span id="auto-refresh-text">Auto-refresh: 60s</span>
+      <div class="table-footer">
+        <span class="table-count" id="tcount">0 vehículos</span>
+        <span class="table-refresh"><span class="table-refresh-dot"></span>Auto-refresh cada 60s</span>
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <div class="footer fade-in" style="animation-delay:0.5s;">
+    <div class="footer anim" style="animation-delay:0.5s">
       <span class="footer-brand">GLOBECO SMART</span>
       <span class="footer-credit">Designed & Built by <span class="wig">W.I.G</span> · DoA & CTO</span>
     </div>
@@ -672,206 +349,115 @@
 </div>
 
 <script>
-  const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSef7p5ZdoUdg1IkOmwkO0eouxtc8T2CQUqjnI3wMFnZ9on_6TE-enQPLqw8eESrMqdQGdaOxhhodzc/pub?output=csv';
+const CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vSef7p5ZdoUdg1IkOmwkO0eouxtc8T2CQUqjnI3wMFnZ9on_6TE-enQPLqw8eESrMqdQGdaOxhhodzc/pub?output=csv';
+const C={ID:0,PLACA:1,CODIGO:2,PROY:3,SEDE:4,ESTADO:5,TIPOV:6,TIPO:7,KM:8,MOTIVO:10,REPAR:11,RETORNO:12};
+let data=[],curFilter='all';
 
-  const COL = {
-    ID: 0, PLACA: 1, CODIGO: 2, PROYECTO: 3, SEDE: 4,
-    ESTADO: 5, TIPO_VEHICULO: 6, TIPO: 7, ODOMETRO: 8,
-    MOTIVO: 10, REPARACION: 11, RETORNO: 12
-  };
+function parseCSV(t){const r=[];let c='',q=false,w=[];for(let i=0;i<t.length;i++){const h=t[i],n=t[i+1];if(q){if(h==='"'&&n==='"'){c+='"';i++}else if(h==='"')q=false;else c+=h}else{if(h==='"')q=true;else if(h===','){w.push(c.trim());c=''}else if(h==='\n'||(h==='\r'&&n==='\n')){w.push(c.trim());r.push(w);w=[];c='';if(h==='\r')i++}else c+=h}}if(c||w.length>0){w.push(c.trim());r.push(w)}return r}
 
-  let allData = [];
-  let currentEstadoFilter = 'all';
-  let refreshInterval;
+function getVehicleIcon(tipo){
+  const t=(tipo||'').toUpperCase();
+  if(t.includes('LAVADOR'))return'<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/><path d="M5 17H3v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0H9"/></svg>';
+  if(t.includes('CARGA LATERAL'))return'<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>';
+  if(t.includes('CAMION')||t.includes('PLATAFORMA'))return'<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>';
+  if(t.includes('TRACTOR'))return'<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="17" r="3"/><circle cx="19" cy="17" r="1.5"/><path d="M4 17V7h8l4 4h4v6"/><path d="M12 7v4h4"/></svg>';
+  if(t.includes('CAMIONETA'))return'<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-4l2-4h6l2 4h8v4h-2"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>';
+  if(t.includes('FURGONETA'))return'<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1h2l3 3v6h-2"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>';
+  return'<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>';
+}
 
-  function parseCSV(text) {
-    const rows = [];
-    let current = '', inQuotes = false, row = [];
-    for (let i = 0; i < text.length; i++) {
-      const ch = text[i], next = text[i+1];
-      if (inQuotes) {
-        if (ch === '"' && next === '"') { current += '"'; i++; }
-        else if (ch === '"') inQuotes = false;
-        else current += ch;
-      } else {
-        if (ch === '"') inQuotes = true;
-        else if (ch === ',') { row.push(current.trim()); current = ''; }
-        else if (ch === '\n' || (ch === '\r' && next === '\n')) {
-          row.push(current.trim()); rows.push(row); row = []; current = '';
-          if (ch === '\r') i++;
-        } else current += ch;
-      }
-    }
-    if (current || row.length > 0) { row.push(current.trim()); rows.push(row); }
-    return rows;
+function estadoBadge(e){const u=(e||'').toUpperCase();
+  if(u.includes('NO DISPONIBLE'))return`<span class="badge badge-no-disponible"><span class="badge-dot"></span>No Disponible</span>`;
+  if(u.includes('DISPONIBLE'))return`<span class="badge badge-disponible"><span class="badge-dot"></span>Disponible</span>`;
+  if(u.includes('BACKUP'))return`<span class="badge badge-backup"><span class="badge-dot"></span>Backup</span>`;
+  return`<span class="badge" style="background:var(--bg2);color:var(--text2);border:1px solid var(--divider)">${e||'—'}</span>`}
+
+function tipoBadge(t){const u=(t||'').toUpperCase();
+  if(u.includes('OPERATIVO'))return`<span class="badge badge-operativo"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Operativo</span>`;
+  if(u.includes('MNT PREVE')||u.includes('PREVENTIV'))return`<span class="badge badge-mnt-prev"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Preventivo</span>`;
+  if(u.includes('MNT CORRE')||u.includes('CORRECTIV'))return`<span class="badge badge-mnt-corr"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Correctivo</span>`;
+  if(u.includes('SINIESTRO'))return`<span class="badge badge-siniestro"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Siniestro</span>`;
+  return`<span class="badge" style="background:var(--bg2);color:var(--text2);border:1px solid var(--divider)">${t||'—'}</span>`}
+
+function fmtKM(v){if(!v)return'<span class="td-empty">Sin registro</span>';const n=parseInt(v.toString().replace(/\D/g,''));if(isNaN(n))return v;const max=350000;const pct=Math.min((n/max)*100,100);return`<div class="km-bar"><span>${n.toLocaleString('es-EC')}</span><div class="km-visual"><div class="km-fill" style="width:${pct}%"></div></div></div>`}
+
+function stats(){
+  const total=data.length;
+  const d=data.filter(r=>{const e=(r[C.ESTADO]||'').toUpperCase();return e.includes('DISPONIBLE')&&!e.includes('NO ')}).length;
+  const nd=data.filter(r=>(r[C.ESTADO]||'').toUpperCase().includes('NO DISPONIBLE')).length;
+  const b=data.filter(r=>(r[C.ESTADO]||'').toUpperCase().includes('BACKUP')).length;
+  const op=data.filter(r=>(r[C.TIPO]||'').toUpperCase().includes('OPERATIVO')).length;
+  const m=data.filter(r=>(r[C.TIPO]||'').toUpperCase().includes('MNT')).length;
+  const s=data.filter(r=>(r[C.TIPO]||'').toUpperCase().includes('SINIESTRO')).length;
+  animNum('s-total',total);animNum('s-disp',d);animNum('s-nodisp',nd);animNum('s-backup',b);
+  animNum('s-oper',op);animNum('s-mnt',m);animNum('s-sin',s);
+}
+
+function animNum(id,target){const el=document.getElementById(id);const start=parseInt(el.textContent)||0;if(start===target)return;const dur=400;const st=performance.now();
+  function step(now){const p=Math.min((now-st)/dur,1);const ease=1-Math.pow(1-p,3);el.textContent=Math.round(start+(target-start)*ease);if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step)}
+
+function popSelects(){
+  const sedes=[...new Set(data.map(r=>r[C.SEDE]).filter(Boolean))].sort();
+  const tipos=[...new Set(data.map(r=>r[C.TIPOV]).filter(Boolean))].sort();
+  document.getElementById('f-sede').innerHTML='<option value="">Todas las sedes</option>'+sedes.map(s=>`<option value="${s}">${s}</option>`).join('');
+  document.getElementById('f-tipo').innerHTML='<option value="">Tipo de vehículo</option>'+tipos.map(t=>`<option value="${t}">${t}</option>`).join('');
+}
+
+function filterBy(f){curFilter=f;document.querySelectorAll('.stat-card').forEach(c=>c.classList.remove('active'));document.querySelector(`[data-filter="${f}"]`).classList.add('active');applyFilters()}
+
+function applyFilters(){
+  const q=(document.getElementById('search').value||'').toLowerCase();
+  const sede=document.getElementById('f-sede').value;
+  const tipo=document.getElementById('f-tipo').value;
+  let f=data;
+  if(curFilter!=='all'){
+    if(curFilter==='MNT')f=f.filter(r=>(r[C.TIPO]||'').toUpperCase().includes('MNT'));
+    else if(curFilter==='OPERATIVO'||curFilter==='SINIESTRO')f=f.filter(r=>(r[C.TIPO]||'').toUpperCase().includes(curFilter));
+    else if(curFilter==='DISPONIBLE')f=f.filter(r=>{const e=(r[C.ESTADO]||'').toUpperCase();return e.includes('DISPONIBLE')&&!e.includes('NO ')});
+    else f=f.filter(r=>(r[C.ESTADO]||'').toUpperCase().includes(curFilter));
   }
+  if(sede)f=f.filter(r=>r[C.SEDE]===sede);
+  if(tipo)f=f.filter(r=>r[C.TIPOV]===tipo);
+  if(q)f=f.filter(r=>(r[C.PLACA]||'').toLowerCase().includes(q)||(r[C.CODIGO]||'').toLowerCase().includes(q)||(r[C.TIPOV]||'').toLowerCase().includes(q)||(r[C.MOTIVO]||'').toLowerCase().includes(q)||(r[C.REPAR]||'').toLowerCase().includes(q));
+  render(f);
+}
 
-  function getEstadoBadge(estado) {
-    const e = (estado || '').toUpperCase();
-    if (e.includes('NO DISPONIBLE')) return `<span class="badge badge-no-disponible"><span class="badge-dot"></span>No Disponible</span>`;
-    if (e.includes('DISPONIBLE')) return `<span class="badge badge-disponible"><span class="badge-dot"></span>Disponible</span>`;
-    if (e.includes('BACKUP')) return `<span class="badge badge-backup"><span class="badge-dot"></span>Backup</span>`;
-    return `<span class="badge" style="background:var(--stat-bg);color:var(--text2);border:1px solid var(--card-border)">${estado || '—'}</span>`;
-  }
+function render(rows){
+  const tb=document.getElementById('tbody');
+  if(!rows.length){tb.innerHTML=`<tr><td colspan="11"><div class="no-results"><div class="no-results-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><div class="no-results-text">Sin resultados</div><div class="no-results-sub">Intenta con otros filtros</div></div></td></tr>`;
+    document.getElementById('tcount').textContent='0 vehículos';return}
+  tb.innerHTML=rows.map((r,i)=>`<tr style="animation-delay:${Math.min(i*0.03,0.6)}s">
+    <td><div class="td-placa"><div class="placa-icon">${getVehicleIcon(r[C.TIPOV])}</div>${r[C.PLACA]||'—'}</div></td>
+    <td>${r[C.CODIGO]||'—'}</td>
+    <td>${r[C.PROY]||'—'}</td>
+    <td>${r[C.SEDE]||'—'}</td>
+    <td>${estadoBadge(r[C.ESTADO])}</td>
+    <td>${r[C.TIPOV]||'—'}</td>
+    <td>${tipoBadge(r[C.TIPO])}</td>
+    <td class="td-km">${fmtKM(r[C.KM])}</td>
+    <td class="td-detail" title="${r[C.MOTIVO]||''}">${r[C.MOTIVO]||'<span class="td-empty">—</span>'}</td>
+    <td class="td-detail" title="${r[C.REPAR]||''}">${r[C.REPAR]||'<span class="td-empty">—</span>'}</td>
+    <td class="td-retorno">${r[C.RETORNO]||'<span class="td-empty">—</span>'}</td>
+  </tr>`).join('');
+  document.getElementById('tcount').textContent=`${rows.length} vehículo${rows.length!==1?'s':''}`;
+}
 
-  function getTipoBadge(tipo) {
-    const t = (tipo || '').toUpperCase();
-    if (t.includes('OPERATIVO')) return `<span class="badge badge-operativo">Operativo</span>`;
-    if (t.includes('MNT PREVE') || t.includes('PREVENTIV')) return `<span class="badge badge-mnt-prev">Mnt Preventivo</span>`;
-    if (t.includes('MNT CORRE') || t.includes('CORRECTIV')) return `<span class="badge badge-mnt-corr">Mnt Correctivo</span>`;
-    if (t.includes('SINIESTRO')) return `<span class="badge badge-siniestro">Siniestro</span>`;
-    return `<span class="badge" style="background:var(--stat-bg);color:var(--text2);border:1px solid var(--card-border)">${tipo || '—'}</span>`;
-  }
+async function loadData(){
+  const btn=document.getElementById('btn-refresh');btn.classList.add('loading');
+  try{
+    const res=await fetch(CSV);if(!res.ok)throw new Error('fail');
+    const txt=await res.text();const rows=parseCSV(txt);
+    data=rows.slice(1).filter(r=>r[C.ID]&&r[C.ID].trim());
+    stats();popSelects();applyFilters();
+    const now=new Date();document.getElementById('last-update').textContent=now.toLocaleTimeString('es-EC',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+    document.getElementById('loading').style.display='none';document.getElementById('dashboard').style.display='block';
+  }catch(e){console.error(e);document.getElementById('loading').innerHTML=`<div style="font-size:32px;margin-bottom:8px">⚠</div><div class="loading-text">Error de conexión</div><div class="loading-sub">Verifica la URL del Google Sheet</div>`}
+  finally{btn.classList.remove('loading')}
+}
 
-  function formatKM(val) {
-    if (!val) return '<span class="td-empty">—</span>';
-    const num = parseInt(val.toString().replace(/\D/g, ''));
-    if (isNaN(num)) return val;
-    return num.toLocaleString('es-EC') + ' km';
-  }
-
-  function updateStats() {
-    const total = allData.length;
-    const disponible = allData.filter(r => (r[COL.ESTADO]||'').toUpperCase().includes('DISPONIBLE') && !(r[COL.ESTADO]||'').toUpperCase().includes('NO ')).length;
-    const noDisponible = allData.filter(r => (r[COL.ESTADO]||'').toUpperCase().includes('NO DISPONIBLE')).length;
-    const backup = allData.filter(r => (r[COL.ESTADO]||'').toUpperCase().includes('BACKUP')).length;
-    const operativo = allData.filter(r => (r[COL.TIPO]||'').toUpperCase().includes('OPERATIVO')).length;
-    const mnt = allData.filter(r => (r[COL.TIPO]||'').toUpperCase().includes('MNT')).length;
-    const siniestro = allData.filter(r => (r[COL.TIPO]||'').toUpperCase().includes('SINIESTRO')).length;
-
-    document.getElementById('stat-total').textContent = total;
-    document.getElementById('stat-disponible').textContent = disponible;
-    document.getElementById('stat-no-disponible').textContent = noDisponible;
-    document.getElementById('stat-backup').textContent = backup;
-    document.getElementById('stat-operativo').textContent = operativo;
-    document.getElementById('stat-mnt').textContent = mnt;
-    document.getElementById('stat-siniestro').textContent = siniestro;
-  }
-
-  function populateSelects() {
-    const sedes = [...new Set(allData.map(r => r[COL.SEDE]).filter(Boolean))].sort();
-    const tipos = [...new Set(allData.map(r => r[COL.TIPO_VEHICULO]).filter(Boolean))].sort();
-
-    const sedeSelect = document.getElementById('filter-sede');
-    sedeSelect.innerHTML = '<option value="">Todas las sedes</option>' + sedes.map(s => `<option value="${s}">${s}</option>`).join('');
-
-    const tipoSelect = document.getElementById('filter-tipo-vehiculo');
-    tipoSelect.innerHTML = '<option value="">Todos los vehículos</option>' + tipos.map(t => `<option value="${t}">${t}</option>`).join('');
-  }
-
-  function filterBy(filter) {
-    currentEstadoFilter = filter;
-    document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
-    document.querySelector(`[data-filter="${filter}"]`).classList.add('active');
-    applyFilters();
-  }
-
-  function applyFilters() {
-    const search = (document.getElementById('search').value || '').toLowerCase();
-    const sede = document.getElementById('filter-sede').value;
-    const tipoV = document.getElementById('filter-tipo-vehiculo').value;
-
-    let filtered = allData;
-
-    if (currentEstadoFilter !== 'all') {
-      if (currentEstadoFilter === 'MNT') {
-        filtered = filtered.filter(r => (r[COL.TIPO]||'').toUpperCase().includes('MNT'));
-      } else if (currentEstadoFilter === 'OPERATIVO' || currentEstadoFilter === 'SINIESTRO') {
-        filtered = filtered.filter(r => (r[COL.TIPO]||'').toUpperCase().includes(currentEstadoFilter));
-      } else {
-        if (currentEstadoFilter === 'DISPONIBLE') {
-          filtered = filtered.filter(r => (r[COL.ESTADO]||'').toUpperCase().includes('DISPONIBLE') && !(r[COL.ESTADO]||'').toUpperCase().includes('NO '));
-        } else {
-          filtered = filtered.filter(r => (r[COL.ESTADO]||'').toUpperCase().includes(currentEstadoFilter));
-        }
-      }
-    }
-
-    if (sede) filtered = filtered.filter(r => r[COL.SEDE] === sede);
-    if (tipoV) filtered = filtered.filter(r => r[COL.TIPO_VEHICULO] === tipoV);
-
-    if (search) {
-      filtered = filtered.filter(r =>
-        (r[COL.PLACA]||'').toLowerCase().includes(search) ||
-        (r[COL.CODIGO]||'').toLowerCase().includes(search) ||
-        (r[COL.TIPO_VEHICULO]||'').toLowerCase().includes(search) ||
-        (r[COL.MOTIVO]||'').toLowerCase().includes(search) ||
-        (r[COL.REPARACION]||'').toLowerCase().includes(search)
-      );
-    }
-
-    renderTable(filtered);
-  }
-
-  function renderTable(data) {
-    const tbody = document.getElementById('table-body');
-
-    if (data.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="11" class="no-results">No se encontraron vehículos con estos filtros</td></tr>';
-      document.getElementById('table-count-text').textContent = '0 vehículos';
-      return;
-    }
-
-    tbody.innerHTML = data.map(r => `
-      <tr>
-        <td class="td-placa">${r[COL.PLACA] || '—'}</td>
-        <td>${r[COL.CODIGO] || '—'}</td>
-        <td>${r[COL.PROYECTO] || '—'}</td>
-        <td>${r[COL.SEDE] || '—'}</td>
-        <td>${getEstadoBadge(r[COL.ESTADO])}</td>
-        <td>${r[COL.TIPO_VEHICULO] || '—'}</td>
-        <td>${getTipoBadge(r[COL.TIPO])}</td>
-        <td class="td-km">${formatKM(r[COL.ODOMETRO])}</td>
-        <td class="td-motivo" title="${r[COL.MOTIVO] || ''}">${r[COL.MOTIVO] || '<span class="td-empty">—</span>'}</td>
-        <td class="td-reparacion" title="${r[COL.REPARACION] || ''}">${r[COL.REPARACION] || '<span class="td-empty">—</span>'}</td>
-        <td class="td-retorno">${r[COL.RETORNO] || '<span class="td-empty">—</span>'}</td>
-      </tr>
-    `).join('');
-
-    document.getElementById('table-count-text').textContent = `${data.length} vehículo${data.length !== 1 ? 's' : ''}`;
-  }
-
-  async function loadData() {
-    const btn = document.getElementById('btn-refresh');
-    btn.classList.add('loading');
-
-    try {
-      const response = await fetch(SHEET_CSV_URL);
-      if (!response.ok) throw new Error('Error de conexión');
-      const csvText = await response.text();
-      const rows = parseCSV(csvText);
-      allData = rows.slice(1).filter(r => r[COL.ID] && r[COL.ID].trim());
-
-      updateStats();
-      populateSelects();
-      applyFilters();
-
-      const now = new Date();
-      document.getElementById('last-update').textContent = `Actualizado ${now.toLocaleTimeString('es-EC', {hour:'2-digit', minute:'2-digit'})}`;
-
-      document.getElementById('loading').style.display = 'none';
-      document.getElementById('dashboard').style.display = 'block';
-    } catch (err) {
-      console.error('Error:', err);
-      document.getElementById('loading').innerHTML = `
-        <div style="font-size:28px;margin-bottom:8px">⚠</div>
-        <div class="loading-text">Error al conectar con la flota</div>
-        <div style="font-size:12px;color:var(--text3);margin-top:4px;">Verifica la URL del Google Sheet</div>
-      `;
-    } finally {
-      btn.classList.remove('loading');
-    }
-  }
-
-  // Auto-refresh cada 60 segundos
-  function startAutoRefresh() {
-    refreshInterval = setInterval(() => loadData(), 60000);
-  }
-
-  // Iniciar
-  loadData();
-  startAutoRefresh();
+loadData();
+setInterval(()=>loadData(),60000);
 </script>
-
 </body>
 </html>
