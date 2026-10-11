@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <title>GLOBECO SMART · Flota</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
@@ -25,12 +25,20 @@
 .ft{display:flex;flex-direction:column;align-items:center;gap:4px;margin-top:36px}.ft-b{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:4px;background:linear-gradient(135deg,var(--g),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.ft-c{font-size:9px;color:var(--t3);letter-spacing:1px}.ft-c b{font-weight:700}
 .lo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:120px 20px}.lo-r{width:52px;height:52px;border-radius:50%;border:3px solid var(--cb);border-top-color:var(--g);animation:sp .8s linear infinite;position:relative}.lo-r::after{content:'';position:absolute;inset:6px;border-radius:50%;border:2px solid transparent;border-top-color:var(--b);animation:sp 1.3s linear infinite reverse}
 @media(max-width:1200px){.stats{grid-template-columns:repeat(3,1fr)}.hero-num{font-size:80px}}@media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr)}.mn{padding:16px}.hdr{padding:0 16px}.hero-num{font-size:56px}.vg{grid-template-columns:1fr}.tbar{flex-direction:column;width:100%}.sb{min-width:100%}.insights{flex-direction:column}}
+.hdr{height:calc(60px + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px));gap:12px}
+.hl{flex:1 1 auto;min-width:0;overflow:hidden}.hr{flex:none}.logo{flex:none}.hbr{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vback{width:36px;height:36px;border-radius:10px;border:1px solid var(--cb);background:var(--card);color:var(--t2);display:flex;align-items:center;justify-content:center;flex:none;text-decoration:none}
+.vback svg{width:18px;height:18px}
+@media(max-width:768px){.hdr{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+@media(max-width:600px){.hsep,.hclk{display:none}.hl{gap:10px}.hbr{font-size:20px;letter-spacing:2px;white-space:nowrap}.hsub{display:none}.logo{width:34px;height:34px}}
+@media(max-width:360px){.hbr{font-size:17px;letter-spacing:1px}.lpill{display:none}}
+body{overflow-x:hidden}
 </style>
 </head>
 <body>
 <div class="bg-g"></div>
 <div class="modal-bg" id="mbg" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-hero"><div class="modal-hero-bg" id="m-bg"></div><div class="modal-hero-ov"></div><span class="modal-hero-type" id="m-type"></span></div><div class="modal-body" id="m-body"></div></div></div>
-<header class="hdr"><div class="hl"><div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2a14.5 14.5 0 0 0 0 20"/><path d="M12 2a14.5 14.5 0 0 1 0 20"/><path d="M2 12h10"/></svg></div><span class="hbr">GLOBECO SMART</span><div class="hsep"></div><span class="hsub">Flota vehicular</span></div><div class="hr"><div class="lpill"><span class="ldot"></span><span class="ltxt">Live</span></div><span class="hclk" id="clk"></span><button class="rbtn" onclick="loadData()" id="rbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></button></div></header>
+<header class="hdr"><div class="hl"><a class="vback" href="/portal/" aria-label="Volver al portal" title="Volver al portal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></a><div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2a14.5 14.5 0 0 0 0 20"/><path d="M12 2a14.5 14.5 0 0 1 0 20"/><path d="M2 12h10"/></svg></div><span class="hbr">GLOBECO SMART</span><div class="hsep"></div><span class="hsub">Flota vehicular</span></div><div class="hr"><div class="lpill"><span class="ldot"></span><span class="ltxt">Live</span></div><span class="hclk" id="clk"></span><button class="rbtn" onclick="loadData()" id="rbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></button></div></header>
 <div class="mn">
 <div id="ld" class="lo"><div class="lo-r"></div><div style="font-size:15px;color:var(--t2);font-weight:500">Conectando con la flota...</div></div>
 <div id="dash" style="display:none">
